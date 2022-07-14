@@ -3,6 +3,9 @@ import { useRef } from 'react';
 import classes from './NewCommentForm.module.css';
 
 const NewCommentForm = props => {
+	function uniqueID() {
+		return Math.floor(Math.random() * Date.now());
+	}
 	const commentTextRef = useRef();
 
 	const submitFormHandler = event => {
@@ -11,7 +14,11 @@ const NewCommentForm = props => {
 		// optional: Could validate here
 
 		// send comment to server
-		props.onAddComment({ id: props.id, text: commentTextRef.current });
+		props.onAddComment({
+			id: uniqueID(),
+			quoteId: props.id,
+			text: commentTextRef.current,
+		});
 	};
 
 	return (

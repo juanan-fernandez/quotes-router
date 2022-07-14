@@ -10,9 +10,9 @@ import { QuoteDetail } from './pages/QuoteDetail';
 import { NotFound } from './pages/NotFound';
 
 const testQuotes = [
-	{ id: 'q1', author: 'Juanin', text: 'No por mucho madrugar amanece más temprano' },
+	{ id: 'q123', author: 'Juanin', text: 'No por mucho madrugar amanece más temprano' },
 	{
-		id: 'q2',
+		id: 'q2333',
 		author: 'Juanin',
 		text: 'Ahí tiras un capazo pollas y no llega ninguna al suelo',
 	},
